@@ -1,0 +1,45 @@
+{
+    "parameters" :{
+        "硬件参数" : {
+            "设备型号" : {"value" : "None", "enum_id" : 1},
+            "运动" : {
+                "X轴" : {
+                    "轴号" : {"value" : 3.14, "enum_id" : 10},
+                    "每圈脉冲" :  {"value" : 3.14, "enum_id" : 11},
+                    "每圈螺距" :  {"value" : 3.14, "enum_id" : 12},
+                    "正向行程" :  {"value" : 3.14, "enum_id" : 13},
+                    "电机反向" :  {"value" : 0, "enum_id" : 14},
+                    "正限位" : {"value" : 0, "enum_id" : 15},
+                    "负限位" : {"value" : 0, "enum_id" : 16}
+                },
+                "Y轴" : {
+                    "轴号" :    {"value" : 3.14, "enum_id" : 20},
+                    "每圈脉冲" :  {"value" : 3.14, "enum_id" : 21},
+                    "每圈螺距" :  {"value" : 3.14, "enum_id" : 22},
+                    "正向行程" :  {"value" : 3.14, "enum_id" : 23},
+                    "电机反向" :  {"value" : 0, "enum_id" : 24},
+                    "正限位" : {"value" : 0, "enum_id" : 25},
+                    "负限位" : {"value" : 0, "enum_id" : 26}
+                },
+                "Z轴" : {
+                    "轴号" : {"value" : 3.14, "enum_id" : 30},
+                    "每圈脉冲" :  {"value" : 3.14, "enum_id" : 31},
+                    "每圈螺距" :  {"value" : 3.14, "enum_id" : 32},
+                    "正向行程" :  {"value" : 3.14, "enum_id" : 33},
+                    "电机反向" :  {"value" : 0, "enum_id" : 34},
+                    "正限位" : {"value" : 0, "enum_id" : 35},
+                    "负限位" : {"value" : 0, "enum_id" : 36}
+                },
+                "A轴" : {
+                    "轴号" : {"value" : 3.14, "enum_id" : 40},
+                    "每圈脉冲" :  {"value" : 3.14, "enum_id" : 41},
+                    "每圈螺距" :  {"value" : 3.14, "enum_id" : 42},
+                    "正向行程" :  {"value" : 3.14, "enum_id" : 43},
+                    "电机反向" :  {"value" : 0, "enum_id" : 44},
+                    "正限位" : {"value" : 0, "enum_id" : 45},
+                    "负限位" : {"value" : 0, "enum_id" : 46}
+                }
+            }
+        }
+    }
+}

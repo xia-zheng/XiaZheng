@@ -1,0 +1,50 @@
+{
+    "enum_tables" : {
+        "限位" : {"软件" : 0, "硬件" : 1, "无" : 2},
+        "对准" : {"手动对准" : 0, "自动对准" : 1},
+        "电机反向" : {"正向" : 0, "反向" : 1}
+    },
+    "parameters" :{
+        "硬件参数" : {
+            "设备型号" : {"limit": 777, "enum_id" : 1},
+            "运动" : {
+                "X轴" : {
+                    "轴号" : {"limit": 777, "enum_id" : 10},
+                    "每圈脉冲" :  {"limit": 777, "enum_id" : 11},
+                    "每圈螺距" :  {"limit": 777, "enum_id" : 12},
+                    "正向行程" :  {"limit": 777, "enum_id" : 13},
+                    "电机反向" :  {"limit": 777, "enum_id" : 14, "enum_table_name" : "电机反向"},
+                    "正限位" : {"limit": 777, "enum_id" : 15, "enum_table_name" : "限位"},
+                    "负限位" : {"limit": 777, "enum_id" : 16, "enum_table_name" : "限位"}
+                },
+                "Y轴" : {
+                    "轴号" :    {"limit": 777, "enum_id" : 20},
+                    "每圈脉冲" :  {"limit": 777, "enum_id" : 21},
+                    "每圈螺距" :  {"limit": 777, "enum_id" : 22},
+                    "正向行程" :  {"limit": 777, "enum_id" : 23},
+                    "电机反向" :  {"limit": 777, "enum_id" : 24, "enum_table_name" : "电机反向"},
+                    "正限位" : {"limit": 777, "enum_id" : 25, "enum_table_name" : "限位"},
+                    "负限位" : {"limit": 777, "enum_id" : 26, "enum_table_name" : "限位"}
+                },
+                "Z轴" : {
+                    "轴号" : {"limit": 777, "enum_id" : 30},
+                    "每圈脉冲" :  {"limit": 777, "enum_id" : 31},
+                    "每圈螺距" :  {"limit": 777, "enum_id" : 32},
+                    "正向行程" :  {"limit": 777, "enum_id" : 33},
+                    "电机反向" :  {"limit": 777, "enum_id" : 34, "enum_table_name" : "电机反向"},
+                    "正限位" : {"limit": 777, "enum_id" : 35, "enum_table_name" : "限位"},
+                    "负限位" : {"limit": 777, "enum_id" : 36, "enum_table_name" : "限位"}
+                },
+                "A轴" : {
+                    "轴号" : {"limit": 777, "enum_id" : 40},
+                    "每圈脉冲" :  {"limit": 777, "enum_id" : 41},
+                    "每圈螺距" :  {"limit": 777, "enum_id" : 42},
+                    "正向行程" :  {"limit": 777, "enum_id" : 43},
+                    "电机反向" :  {"limit": 777, "enum_id" : 44, "enum_table_name" : "电机反向"},
+                    "正限位" : {"limit": 777, "enum_id" : 45, "enum_table_name" : "限位"},
+                    "负限位" : {"limit": 777, "enum_id" : 46, "enum_table_name" : "限位"}
+                }
+            }
+        }
+    }
+}
