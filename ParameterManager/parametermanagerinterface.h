@@ -4,12 +4,6 @@
  * @FilePath: parametermanagerinterface.h
  * @Description: 
  */
-/*
- * @Author: Xiazheng <xiazheng.hhu@qq.com>
- * @Date: 2023-04-07 18:48:52
- * @FilePath: parametermanagerinterface.h
- * @Description: 
- */
 #ifndef PARAMETERMANAGERINTERFACE_H
 #define PARAMETERMANAGERINTERFACE_H
 

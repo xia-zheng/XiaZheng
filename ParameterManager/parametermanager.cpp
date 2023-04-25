@@ -4,3 +4,4 @@
  * @FilePath: parametermanager.cpp
  * @Description: 
  */
+#include "parametermanager.h"
