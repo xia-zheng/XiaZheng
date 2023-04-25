@@ -15,16 +15,19 @@ class ParameterManager : public ParameterManagerInterface
 private:
     ParameterManager();
     ~ParameterManager();
-    static ParameterManager *instance;
+    static ParameterManager& instance;
 
 public:
     //单例模式
-    static ParameterManager *getInstance(){
-        if(instance == nullptr){
-            instance = new ParameterManager();
-        }
+    static ParameterManager& getInstance(){
         return instance;
     }
+    //设定值的读写
+    bool get_parameter(int para_id, QVariant &value, Role role) override;
+    bool set_parameter(int para_id, QVariant &value, Role role) override;
+    //文件读写
+    bool load_parameter_limit_file(QString file_name) override;
+    bool load_parameter_value_file(QString file_name) override;
 };
 
 #endif // PARAMETERMANAGER_H

@@ -43,12 +43,6 @@ public:
         OperatorWrite   = Write << Operator,
     };
 
-    //实际值的接口绑定
-    virtual bool bind_real_parameter_get(int para_id, std::function<bool(QVariant &)> get_lambda, Role role) = 0;
-    virtual bool bind_real_parameter_set(int para_id, std::function<bool(QVariant &)> set_lambda, Role role) = 0;
-    //实际值的读写
-    virtual bool get_real_parameter(int para_id, QVariant &value, Role role) = 0;
-    virtual bool set_real_parameter(int para_id, QVariant &value, Role role) = 0;
     //设定值的读写
     virtual bool get_parameter(int para_id, QVariant &value, Role role) = 0;
     virtual bool set_parameter(int para_id, QVariant &value, Role role) = 0;
@@ -67,9 +61,7 @@ private:
         QVariant value;
         QVariant::Type type;
         int permission;
-        std::function<bool(QVariant &)> get_real_lambda;
-        std::function<bool(QVariant &)> set_real_lambda;
-        QVariantMap enum_table; //字符串到QVariant的映射表
+        QVariantMap enum_table; 
 
         void check_permission(Permission permission, int role);
         void check_permission(RolePermission role_permission);
