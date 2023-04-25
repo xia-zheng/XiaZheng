@@ -4,8 +4,14 @@
  * @FilePath: parametermanagerinterface.h
  * @Description: 
  */
-#ifndef PARAMETERMANAGER_H
-#define PARAMETERMANAGER_H
+/*
+ * @Author: Xiazheng <xiazheng.hhu@qq.com>
+ * @Date: 2023-04-07 18:48:52
+ * @FilePath: parametermanagerinterface.h
+ * @Description: 
+ */
+#ifndef PARAMETERMANAGERINTERFACE_H
+#define PARAMETERMANAGERINTERFACE_H
 
 #include <QVariant>
 #include <QMap>
@@ -65,15 +71,15 @@ private:
 
         void check_permission(Permission permission, int role);
         void check_permission(RolePermission role_permission);
-        bool get_real_parameter(QVariant &value, Role role);
-        bool set_real_parameter(QVariant &value, Role role);
-        bool bind_real_parameter_get(std::function<bool(QVariant &)> get_lambda, Role role);
-        bool bind_real_parameter_set(std::function<bool(QVariant &)> set_lambda, Role role);
-        bool get_real_parameter(QVariant &value, Role role);
-        bool set_real_parameter(QVariant &value, Role role);
+        bool get_set_parameter(QVariant &value, Role role);
+        bool set_set_parameter(QVariant &value, Role role);
+        // bool bind_real_parameter_get(std::function<bool(QVariant &)> get_lambda, Role role);
+        // bool bind_real_parameter_set(std::function<bool(QVariant &)> set_lambda, Role role);
+        // bool get_real_parameter(QVariant &value, Role role);
+        // bool set_real_parameter(QVariant &value, Role role);
     };
     QMap<int, Parameter> parameter_map;
-}
+};
 
 
 #endif // PARAMETERMANAGER_H
