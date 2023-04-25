@@ -76,4 +76,4 @@ private:
 };
 
 
-#endif // PARAMETERMANAGER_H
+#endif // PARAMETERMANAGERINTERFACE_H
