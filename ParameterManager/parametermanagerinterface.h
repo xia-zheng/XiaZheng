@@ -45,7 +45,7 @@ public:
 
     //设定值的读写
     virtual bool get_parameter(int para_id, QVariant &value, Role role) = 0;
-    virtual bool set_parameter(int para_id, QVariant &value, Role role) = 0;
+    virtual bool set_parameter(int para_id, QVariant value, Role role) = 0;
 
     //文件读写
     virtual bool load_parameter_limit_file(QString file_name) = 0;
@@ -60,13 +60,13 @@ private:
         QString path;
         QVariant value;
         QVariant::Type type;
-        int permission;
+        int limit;
         QVariantMap enum_table; 
 
         bool check_permission(Permission permission, Role role);
         bool check_permission(RolePermission role_permission);
         bool get_set_parameter(QVariant &value, Role role);
-        bool set_set_parameter(QVariant &value, Role role);
+        bool set_set_parameter(QVariant value, Role role);
         // bool bind_real_parameter_get(std::function<bool(QVariant &)> get_lambda, Role role);
         // bool bind_real_parameter_set(std::function<bool(QVariant &)> set_lambda, Role role);
         // bool get_real_parameter(QVariant &value, Role role);
