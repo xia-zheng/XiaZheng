@@ -63,8 +63,8 @@ private:
         int permission;
         QVariantMap enum_table; 
 
-        void check_permission(Permission permission, int role);
-        void check_permission(RolePermission role_permission);
+        bool check_permission(Permission permission, Role role);
+        bool check_permission(RolePermission role_permission);
         bool get_set_parameter(QVariant &value, Role role);
         bool set_set_parameter(QVariant &value, Role role);
         // bool bind_real_parameter_get(std::function<bool(QVariant &)> get_lambda, Role role);
