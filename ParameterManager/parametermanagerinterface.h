@@ -74,6 +74,6 @@ private:
     };
     QMap<int, Parameter> parameter_map;
 };
-
+112111
 
 #endif // PARAMETERMANAGERINTERFACE_H
