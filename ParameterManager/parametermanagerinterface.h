@@ -14,7 +14,7 @@ class ParameterManagerInterface
 {
 public:
     /**
-     * @brief   角色与权限的枚举
+     * @brief 角色与权限的枚举
      *    1.  RolePermission  是角色与权限的结合
      *    2.  Permission      是权限类型
      *    3.  Role            是角色类型
@@ -23,7 +23,7 @@ public:
      */
     enum Permission
     {
-        Read = 0B100, 
+        Read = 0B100,
         Write = 0B010,
     };
     enum Role
@@ -61,7 +61,7 @@ private:
         QVariant value;
         QVariant::Type type;
         int limit;
-        QVariantMap enum_table; 
+        QMap enum_table; 
 
         bool check_permission(Permission permission, Role role);
         // bool check_permission(RolePermission role_permission);
