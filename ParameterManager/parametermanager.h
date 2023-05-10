@@ -20,11 +20,14 @@ class ParameterManager : public ParameterManagerInterface
 private:
     ParameterManager();
     ~ParameterManager();
-    static ParameterManager& instance;
+    static ParameterManager *instance;
 
 public:
     //单例模式
-    static ParameterManager& getInstance(){
+    static ParameterManager *getInstance(){
+        if(instance == nullptr){
+            instance = new ParameterManager();
+        }
         return instance;
     }
     //设定值的读写
