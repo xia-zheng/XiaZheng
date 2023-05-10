@@ -1,8 +1,9 @@
 ﻿/*
- * @Author: Xiazheng <xiazheng.hhu@qq.com>
- * @Date: 2023-04-07 18:48:52
- * @FilePath: parametermanager.h
- * @Description: 
+ * @Author       : XiaZheng <xiazheng.hhu@qq.com>
+ * @Date         : 2023-04-07 18:48:52
+ * @LastEditTime : 2023-05-10 12:13:17
+ * @FilePath     : \XiaZheng\ParameterManager\parametermanager.h
+ * @Description  : 
  */
 
 #ifndef PARAMETERMANAGER_H
