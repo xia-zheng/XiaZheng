@@ -1,7 +1,7 @@
 ﻿/*
  * @Author       : XiaZheng <xiazheng.hhu@qq.com>
  * @Date         : 2023-04-07 18:48:52
- * @LastEditTime : 2023-05-10 12:13:17
+ * @LastEditTime : 2023-05-10 23:48:47
  * @FilePath     : \XiaZheng\ParameterManager\parametermanager.h
  * @Description  : 
  */
@@ -19,14 +19,16 @@ class ParameterManager : public ParameterManagerInterface
 {
 private:
     ParameterManager();
-    ~ParameterManager();
     static ParameterManager *instance;
+
+    //辅助函数
+    load_json_object(const QJsonObject &obj, QString current_path);
 
 public:
     //单例模式
     static ParameterManager *getInstance(){
         if(instance == nullptr){
-            instance = new ParameterManager();
+           instance = new ParameterManager();
         }
         return instance;
     }

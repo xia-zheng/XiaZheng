@@ -2,7 +2,7 @@
  * @Author: Xiazheng <xiazheng.hhu@qq.com>
  * @Date: 2023-04-07 18:48:52
  * @FilePath: parametermanagerinterface.h
- * @Description: 
+ * @Description:
  */
 #ifndef PARAMETERMANAGERINTERFACE_H
 #define PARAMETERMANAGERINTERFACE_H
@@ -52,7 +52,7 @@ public:
     virtual bool load_parameter_value_file(QString file_name) = 0;
     virtual bool save_parameter_value_file(QString file_name) = 0;
     
-private:
+protected:
     class Parameter{
     public:
         int para_id;
