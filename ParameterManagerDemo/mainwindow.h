@@ -1,3 +1,10 @@
+/*
+ * @Author       : XiaZheng <xiazheng.hhu@qq.com>
+ * @Date         : 2023-05-01 21:11:33
+ * @LastEditTime : 2023-05-10 14:42:48
+ * @FilePath     : \XiaZheng\ParameterManagerDemo\mainwindow.h
+ * @Description  : 
+ */
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
@@ -19,3 +26,4 @@ private:
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H
+111

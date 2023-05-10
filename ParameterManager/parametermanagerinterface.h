@@ -61,7 +61,7 @@ private:
         QVariant value;
         QVariant::Type type;
         int limit;
-        QMap enum_table; 
+        QVariantMap enum_table;
 
         bool check_permission(Permission permission, Role role);
         // bool check_permission(RolePermission role_permission);
