@@ -1,7 +1,7 @@
 ﻿/*
  * @Author       : XiaZheng <xiazheng.hhu@qq.com>
  * @Date         : 2023-04-07 18:48:52
- * @LastEditTime : 2023-05-11 21:21:41
+ * @LastEditTime : 2023-05-11 22:52:30
  * @FilePath     : \XiaZheng\ParameterManager\parametermanager.cpp
  * @Description  : 
  */
@@ -103,9 +103,9 @@ void ParameterManager::load_limit_json_object(const QJsonObject &obj, QString cu
             }
             //保存参数
             //首先判断是否已经存在此参数，如果存在则更新，否则添加
-            if(instance->parameter_map.find(para.para_id) != instance->parameter_map.end())
+            if(parameter_map.find(para.para_id) != parameter_map.end())
             {
-                Parameter& old_para = instance->parameter_map[para.para_id];
+                Parameter& old_para = parameter_map[para.para_id];
                 old_para.name = para.name;
                 old_para.path = para.path;
                 old_para.limit = para.limit;
@@ -113,7 +113,7 @@ void ParameterManager::load_limit_json_object(const QJsonObject &obj, QString cu
             }
             else
             {
-                instance->parameter_map.insert(para.para_id, para);
+                parameter_map.insert(para.para_id, para);
             }
         }
         //若这是一个父节点，则递归读取子节点
@@ -144,18 +144,20 @@ void ParameterManager::load_value_json_object(const QJsonObject &obj, QString cu
             para.name = iter.key();
             para.path = current_path+ "/" + para.name;
             para.value = value["value"].toVariant();
+            para.type = para.value.type();
             //保存参数
             //首先判断是否已经存在此参数，如果存在则更新，否则添加
-            if(instance->parameter_map.find(para.para_id) != instance->parameter_map.end())
+            if(parameter_map.contains(para.para_id))
             {
-                Parameter& old_para = instance->parameter_map[para.para_id];
+                Parameter& old_para = parameter_map[para.para_id];
                 old_para.name = para.name;
                 old_para.path = para.path;
                 old_para.value = para.value;
+                old_para.type = para.type;
             }
             else
             {
-                instance->parameter_map.insert(para.para_id, para);
+                parameter_map.insert(para.para_id, para);
             }
         }
         //若这是一个父节点，则递归读取子节点
